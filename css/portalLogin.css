@@ -34,7 +34,7 @@ body {
     left: calc(50% - 50px);
 }
 
-.login-box h1 {
+.login-box h1{
     font-family: 'Geostar Fill', cursive;
     margin: 0;
     padding: 0 0 20px;
@@ -93,4 +93,12 @@ body {
 .login-box a:hover {
     font-family: 'Geostar Fill', cursive;
     color: #fff;
+}
+
+.icon-dog{
+    font-family: 'Geostar Fill', cursive;
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
 }
