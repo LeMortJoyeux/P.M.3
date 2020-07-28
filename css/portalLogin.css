@@ -97,8 +97,9 @@ html {
 
 .icon-dog {
     font-family: 'Geostar Fill', cursive;
-    margin: 0;
+    margin: 100;
     padding: 0 0 20px;
     text-align: center;
     font-size: 22px;
+    margin-top: 10px;
 }

@@ -5,120 +5,234 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../img/logo-removebg.png" type="image/x-icon">
-    <link rel="stylesheet" href="/css/uikit.min.css">
     <link rel="stylesheet" href="../css/gradiente.css">
     <link rel="stylesheet" href="../css/portalLogin.css">
+    <link rel="stylesheet" href="../css/layout.css" type="text/css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/framework.css">
     <link href="https://fonts.googleapis.com/css2?family=Geostar+Fill&display=swap" rel="stylesheet">
+
 
     <title>IdeaProyecto</title>
 </head>
 <header>
     <div class="contenedor">
         <h1 class="icon-dog">Vector</h1>
+        <img id="logo" src="../img/logo-removebg.png" alt="logo">
         <input type="checkbox" id="menu-bar">
         <label class="fontawesome-align-justify" for="menu-bar"></label>
-            <nav class="menu">
-                <a href="../html/index.html">Inicio</a>
-                <a href="">Equipo de Trabajo</a>
-                <a href="">Info</a>
-                <a href="../html/guia.html">Guia</a>
-                <a href="../html/ejemploCueva.html">Cueva</a>
-                <a href="../html/ejemploControlable.html">WASDX SPACE</a>
-                <a href="">Contacto</a>
-            </nav>
-            </div>
+
+        <nav class="menu">
+
+            <a href="../html/index.html">Inicio</a>
+            <a href="../html/equipoTrabajo.html">Equipo de Trabajo</a>
+            <a class="active" href="../html/guia.html">Documentacion</a>
+            <a href="../html/ejemploCueva.html">Test</a>
+            <a href="../html/ejemploControlable.html">Test supervisado</a>
+            <a href="../html/contacto.html">Contacto</a>
+        </nav>
+    </div>
 </header>
 
 <body>
-    <div>
-        <h1>Visualizador de un plano 3D</h1>
-        <br>
-        <h2>Introducción</h2>
-        <p>Se explicará un método para almacenar colores en un plano 3D (pero en realidad se puede almacenar cualquier cosa)y luego graficarlos utilizando la herramienta canvas.</p>
-        <br>
-        <h2>Canvas</h2>
-        <img src="../img/tutorial1.png">
-        <p>Si bien no se profundizará aquí en todos los aspectos de canvas, este es un bloque HTML que se manifiesta como un cuadrado en una página web, el chiste de este es que mediante scripts podemos modificar su contenido, hacer líneas o figuras geométricas jugando con sus coordenadas internas.</p>
-        <img src="../img/tutorial2.png">
-        <p>Primero lo primero, almacenamos en una variable el objeto canvas.</p>
-        <img src="../img/tutorial3.png">
-        <p>luego creamos una función que llene el canvas,</p>
-        <p>canvas.getContext("2d") obtiene el lienzo de canvas y lo almacenamos en ctx (de context)</p>
-        <p>.fillStyle es el color con el que se llenan (fill) los objetos de canvas, en este caso será el negro (puedes cambiarlo cuando quieras)</p>
-        <p> finalmente .fillRect(origenX, origenY, ancho, alto) Llenará un cubo con las dimensiones y puntos de origen asignados, en este caso le dimos de largo y ancho las dimensiones del canvas, llenando el canvas de negro.</p>
-        <img src="../img/tutorial4.png">
+    <div id="pageintro" class="hoc clear">
+        <article>
+            <h3>Visualizador de un plano 3D</h3>
+            <br>
+            <h2>Introducción</h2>
+            <p>Se explicará un método para almacenar colores en un plano 3D (pero en realidad se puede almacenar cualquier cosa)y luego graficarlos utilizando la herramienta canvas.</p>
+            <br>
+            <h2>Canvas</h2>
+            <img src="../img/tutorial1.png">
+            <p>Si bien no se profundizará aquí en todos los aspectos de canvas, este es un bloque HTML que se manifiesta como un cuadrado en una página web, el chiste de este es que mediante scripts podemos modificar su contenido, hacer líneas o figuras
+                geométricas jugando con sus coordenadas internas.</p>
+            <img src="../img/tutorial2.png">
+            <p>Primero lo primero, almacenamos en una variable el objeto canvas.</p>
+            <img src="../img/tutorial3.png">
+            <p>luego creamos una función que llene el canvas,</p>
+            <p>canvas.getContext("2d") obtiene el lienzo de canvas y lo almacenamos en ctx (de context)</p>
+            <p>.fillStyle es el color con el que se llenan (fill) los objetos de canvas, en este caso será el negro (puedes cambiarlo cuando quieras)</p>
+            <p> finalmente .fillRect(origenX, origenY, ancho, alto) Llenará un cubo con las dimensiones y puntos de origen asignados, en este caso le dimos de largo y ancho las dimensiones del canvas, llenando el canvas de negro.</p>
+            <img src="../img/tutorial4.png">
+        </article>
+    </div>
 
-        <h2>Objeto tablero</h2>
-        <img src="../img/tutorial5.png">
-        <p>Variables del objeto, las iremos explicando a medida que las vayamos usando</p>
-        <img src="../img/tutorial6.png">
-        <p>Esta función devuelve la posición codificada en un arreglo como [puestoColumna, puestoFila] del número de fila y columna del espacio central del canvas, según la variable tablero.filas y tablero.columnas</p>
-        <img src="../img/tutorial7.png">
-        <p>Aquí empieza el webeo maximo, asi que preparate tu café y tomate tu ritalin más cercano
-            Las variables tablero.filas y tablero.columnas son utilizadas para recorrer cada "cubo" de la pantalla ocupando for's.
-            En cada ciclo, sondeara nuestro mapa de tres dimensiones para obtener el color del cubo de la fila y columna en la que se posicionaron los for's
-            volveremos a esta función pronto. O quizá no tan pronto.
-            </p>
+    <div class="wrapper row3">
+        <main class="hoc container clear">
+            <h3 align="center">Objeto tablero</h3>
+            <ul class="nospace group services">
+                <li class="one_third first">
+                    <article>
+                        <a data-fancybox="gallery" href="../img/tutorial5.png"><img src="../img/tutorial5.png"></a>
+                        <p>Variables del objeto, las iremos explicando a medida que las vayamos usando. [&hellip;]</p>
+                    </article>
+                </li>
+                <li class="one_third">
+                    <article>
+                        <a data-fancybox="gallery" href="../img/tutorial6.png"><img src="../img/tutorial6.png"></a>
+                        <p>Esta función devuelve la posición codificada en un arreglo como [puestoColumna, puestoFila] del número de fila y columna del espacio central del canvas, según la variable tablero.filas y tablero.columnas. [&hellip;]</p>
+                    </article>
+                </li>
+                <li class="one_third">
+                    <article>
+                        <a data-fancybox="gallery" href="../img/tutorial7.png"><img src="../img/tutorial7.png"></a>
+                        <p>Aquí empieza el webeo maximo, asi que preparate tu café y tomate tu ritalin más cercano Las variables tablero.filas y tablero.columnas son utilizadas para recorrer cada "cubo" de la pantalla ocupando for's. En cada ciclo, sondeara
+                            nuestro mapa de tres dimensiones para obtener el color del cubo de la fila y columna en la que se posicionaron los for's volveremos a esta función pronto. O quizá no tan pronto. [&hellip;]</p>
+                    </article>
+                </li>
+            </ul>
+        </main>
+    </div>
+    <div class="wrapper bgded overlay">
+        <main class="hoc container clear">
+            <ul class="nospace group">
+                <li class="one_quarter first nospace group services">
+                    <article>
+                        <h1>Plano de tres dimensiones como objeto</h1>
+                        <img src="../img/tutorial8.png">
+                        <p>Este objeto es una alternativa desarrollada por nosotros al clásico plano hecho con arreglos encontramos las siguientes ventajas: [&hellip;]</p>
+                    </article>
+                </li>
+                <li class="one_quarter">
+                    <article>
+                        <h3>Plano3D.setCasilla( x, y, z) vS Array[x] [y] [z] = ...</h3>
+                        <p>Cuando quieres agregar un espacio en un plano de arreglos, debes crear los espacios desde el index 0 hasta el que quieres agregar (por ejemplo en el 0,0,4 debes tener el 000 001 002 003) además genera conflictos si usas un index
+                            negativo. En la versión como objeto da igual el orden, ya que lo que sucede es que a Plano3d.plano se le crea un atributo cuyo nombre será un espacio, y se le asigna lo que se desea, en este caso un color, si le asignamos Plano3d.setCasilla(0,0,4,RGBANEGRO)
+                            simplemente guardara en el subObjeto plano un atributo llamado "x0y0z9" con el valor RGBANEGRO y si se volviese a asignar esa ubicación, lo sobreescribirá. [&hellip;]</p>
+                    </article>
+                </li>
+                <li class="one_quarter">
+                    <article>
+                        <h3>getCasilla( x, y, z )</h3>
+                        <p>Si el subObjeto plano posee la variable equivalente a la posición entregada retorna su valor, de lo contrario retornará color negro tenue (tenue = poca opacidad) el color retornado y su opacidad puede modificarse por fines estéticos
+                            o prácticos.[&hellip;]</p>
+                    </article>
+                </li>
+                <li class="one_quarter">
+                    <article>
+                        <h3>Plano3D.setCasilla( x, y, z) vS Array[x] [y] [z] = ...</h3>
+                        <p>Cuando quieres agregar un espacio en un plano de arreglos, debes crear los espacios desde el index 0 hasta el que quieres agregar (por ejemplo en el 0,0,4 debes tener el 000 001 002 003) además genera conflictos si usas un index
+                            negativo. En la versión como objeto da igual el orden, ya que lo que sucede es que a Plano3d.plano se le crea un atributo cuyo nombre será un espacio, y se le asigna lo que se desea, en este caso un color, si le asignamos Plano3d.setCasilla(0,0,4,RGBANEGRO)
+                            simplemente guardara en el subObjeto plano un atributo llamado "x0y0z9" con el valor RGBANEGRO y si se volviese a asignar esa ubicación, lo sobreescribirá.[&hellip;]</p>
+                    </article>
+                </li>
+            </ul>
+        </main>
+    </div>
 
-        <h2>Plano de tres dimensiones como objeto</h2>
-        <img src="../img/tutorial8.png">
-        <p>Este objeto es una alternativa desarrollada por nosotros al clásico plano hecho con arreglos encontramos las siguientes ventajas:</p>
-        <h3>Plano3D.setCasilla( x, y, z) vS Array[x] [y] [z] = ...</h3>
-        <p>Cuando quieres agregar un espacio en un plano de arreglos, debes crear los espacios desde el index 0 hasta el que quieres agregar (por ejemplo en el 0,0,4 debes tener el 000 001 002 003) además genera conflictos si usas un index negativo. En la versión como objeto da igual el orden, ya que lo que sucede es que a Plano3d.plano se le crea un atributo cuyo nombre será un espacio, y se le asigna lo que se desea, en este caso un color, si le asignamos Plano3d.setCasilla(0,0,4,RGBANEGRO) simplemente guardara en el subObjeto plano un atributo llamado "x0y0z9" con el valor RGBANEGRO y si se volviese a asignar esa ubicación, lo sobreescribirá.</p>
-        <h3>getCasilla( x, y, z )</h3>
-        <p>Si el subObjeto plano posee la variable equivalente a la posición entregada retorna su valor, de lo contrario retornará color negro tenue (tenue = poca opacidad) el color retornado y su opacidad puede modificarse por fines estéticos o prácticos.</p>
-        <h2>visor()</h2>
-        <img src="../img/tutorial9.png">
-        <p>Volviendo a la función dibujar del objeto tablero, este obtiene almacena en la variable fichasSondeadas lo retornado por la función visor(), a esta le entrega
-            Tablero.puntoDeVista que es un Array con 3 valores numéricos ( [int,int,int]) que representa donde se posicionará en el plano la perspectiva
-            Tablero.distanciaDeVicion que es un valor numérico que representa cuantas posiciones se alejara el visor del punto de vista. para capturar la imagen (si no se alejara mostraría muy cerca lo que se quiere ver, perdiendo detalles)
-            Tablero.vista que es un array con dos strings que pueden ser "-x", "+x", "-y" etc, que juntas representan el ángulo que se utilizara para distanciarse del punto de vista y para sondear el mapa (veremos más adelante el sondeo del mapa)
-            [contadorDelPrimerFor, Tablero.filas - contadorDelSegundoFor] como ambos for's sirven para recorrer los cubos de la pantalla que se quieren mostrar, esto permite identificar qué cubo debe capturar el visor
-            finalmente se introduce lo que retorna la función Tablero.obtenerCentroPantalla()
-            </p>
-        <img src="../img/tutorial10.png">
-        <p>Creamos una variable puntero que almacenará un array, y recorriendo el arreglo introducido a la función (argumento lugarVisor) extraemos uno a uno sus valores cartesianos ¿porque no simplemente hacer puntero=lugarVisor? porque al ser lugarVisor un objeto encontrado en Tablero, si lo copiamos en realidad copiaremos su espacio de memoria, que ya está siendo ocupado, y si modificamos puntero modificaremos también Tablero.puntoDeVista
-            Luego dependiendo de los ejes utilizados para elegir el angulo de inclinación vamos a mover el puntero para alejarlo en dicho ángulo (-y -z es como decir arriba profundo), se aleja tantos espacios como la distancia de visión asignada, que en este caso es la que se encontraba en Tablero.distanciaDeVicion
-            La variable Desfase se utiliza para triangular el espacio en el centro de la pantalla y el lugar actual que está buscando dibujar(según los dos fors de Tablero.dibujar)
-            Al momento de sondear el plano, se moverá un puntero que indica una posición de este, el puntero se trasladara según las direcciones del ángulo indicado  como argumento
-            segundoMov es un booleano que representa si los  contadores de los fors de Tablero.dibujar indican que están en un número de fila par o no, con lo cual al momento de sondear se decidirá si partir moviéndose según el primer o segundo valor del argumento ángulo.
-            </p>
-        <h3>sondeoDiagonal()</h3>
-        <img src="../img/tutorial11.png">
-        <p>El valor "a" de "rgba", representa qué tan transparente es un color, de forma que si se pinta sobre otro color no lo cubrirá del todo, a no ser que tenga transparencia mínima (o nitidez máxima). Este valor va de 0 a 1, siendo 0 completamente transparente y 1 completamente nítido, 0.5 se mezclará perfectamente con el fondo.
-            Esta función, trabaja alrededor del arreglo llamado "contenido", se moverá a través del plano3D acumulando los colores por los que pase (en contenido) hasta que la suma de las densidades de estos sea 1 o tenga tantos colores como el valor del argumento "profundidad". Dependiendo del valor booleano de "pasoPar" se moverá según el primera o segunda dirección del argumento ángulo.
-        </p>
-        <img src="../img/tutorial12.png">
-        <p>mover puntero mueve el puntero dependiendo de la dirección escrita, de momento solo desarrollamos atrás y abajo</p>
-        <img src="../img/tutorial13.png">
-        <p>la linea "color = planoTridimensional.getCasilla(...)" ocupa las posiciones del puntero para recoger un color de una casilla del plano3D
-            la linea sumaIntensidadColoresDeLasCasillas ... va extrallendo y acumulando la densidad de los colores para que en conjunto no pasen el valor 1
-        </p>
-        <br>
-        <p> finalmente</p>
-        <img src="../img/tutorial14.png">
-        <p>se invierte el orden de los colores y se retorna de sondeoDiagonal a visor…</p>
-        <img src="../img/tutorial15.png">
-        <p>...se returna del visor al Tablero.draw()...</p>
-        <h3>... volvemos a draw(), pasamos lo peor, espero puedas volver a dormir</h3>
-        <img src="../img/tutorial16.png">
-        <p>Luego de nuestra travesía tolkiana a través de esas funciones lovecraftianas llegamos a que nuestra variable fichasSondeadas contiene un array de colores rgba
-            luego se mezclaran los colores de fichasSondeadas creando un cuadrado con las dimensiones del canvas dividido a lo ancho por la cantidad de columnas del tablero y a lo largo por la cantidad de filas y posicionado según esas mismas dimensiones pero multiplicadas por la cantidad de filas y columnas que se asumen van arriba y a la izquierda que la de el cubo a pintar
-            </p>
+    <div class="wrapper row3">
+        <main class="hoc container clear">
+            <h3 align="center">Visor()</h3>
+            <ul class="nospace group services">
+                <li class="one_second first">
+                    <article>
+                        <a data-fancybox="gallery" href="../img/tutorial9.png"><img src="../img/tutorial9.png"></a>
+                        <p>Volviendo a la función dibujar del objeto tablero, este obtiene almacena en la variable fichasSondeadas lo retornado por la función visor(), a esta le entrega Tablero.puntoDeVista que es un Array con 3 valores numéricos ( [int,int,int])
+                            que representa donde se posicionará en el plano la perspectiva Tablero.distanciaDeVicion que es un valor numérico que representa cuantas posiciones se alejara el visor del punto de vista. para capturar la imagen (si no se alejara
+                            mostraría muy cerca lo que se quiere ver, perdiendo detalles) Tablero.vista que es un array con dos strings que pueden ser "-x", "+x", "-y" etc, que juntas representan el ángulo que se utilizara para distanciarse del punto
+                            de vista y para sondear el mapa (veremos más adelante el sondeo del mapa) [contadorDelPrimerFor, Tablero.filas - contadorDelSegundoFor] como ambos for's sirven para recorrer los cubos de la pantalla que se quieren mostrar,
+                            esto permite identificar qué cubo debe capturar el visor finalmente se introduce lo que retorna la función Tablero.obtenerCentroPantalla() [&hellip;]</p>
+                    </article>
+                </li>
+                <li class="one_second">
+                    <article>
+                        <a data-fancybox="gallery" href="../img/tutorial10.png"><img src="../img/tutorial10.png"></a>
+                        <p>Creamos una variable puntero que almacenará un array, y recorriendo el arreglo introducido a la función (argumento lugarVisor) extraemos uno a uno sus valores cartesianos ¿porque no simplemente hacer puntero=lugarVisor? porque
+                            al ser lugarVisor un objeto encontrado en Tablero, si lo copiamos en realidad copiaremos su espacio de memoria, que ya está siendo ocupado, y si modificamos puntero modificaremos también Tablero.puntoDeVista Luego dependiendo
+                            de los ejes utilizados para elegir el angulo de inclinación vamos a mover el puntero para alejarlo en dicho ángulo (-y -z es como decir arriba profundo), se aleja tantos espacios como la distancia de visión asignada, que en
+                            este caso es la que se encontraba en Tablero.distanciaDeVicion La variable Desfase se utiliza para triangular el espacio en el centro de la pantalla y el lugar actual que está buscando dibujar(según los dos fors de Tablero.dibujar)
+                            Al momento de sondear el plano, se moverá un puntero que indica una posición de este, el puntero se trasladara según las direcciones del ángulo indicado como argumento segundoMov es un booleano que representa si los contadores
+                            de los fors de Tablero.dibujar indican que están en un número de fila par o no, con lo cual al momento de sondear se decidirá si partir moviéndose según el primer o segundo valor del argumento ángulo. [&hellip;]</p>
+                    </article>
+                </li>
+            </ul>
+        </main>
+    </div>
+    <div class="wrapper bgded overlay">
+        <main class="hoc container clear">
+            <h3 align="center">Sondeo Diagonal()</h3>
+            <ul class="nospace group">
+                <li class="one_third first">
+                    <article>
+                        <img src="../img/tutorial11.png">
+                        <p>El valor "a" de "rgba", representa qué tan transparente es un color, de forma que si se pinta sobre otro color no lo cubrirá del todo, a no ser que tenga transparencia mínima (o nitidez máxima). Este valor va de 0 a 1, siendo 0
+                            completamente transparente y 1 completamente nítido, 0.5 se mezclará perfectamente con el fondo. [&hellip;]
+                        </p>
+                    </article>
+                </li>
+                <li class="one_third">
+                    <article>
+                        <p>[&hellip;]Esta función, trabaja alrededor del arreglo llamado "contenido", se moverá a través del plano3D acumulando los colores por los que pase (en contenido) hasta que la suma de las densidades de estos sea 1 o tenga tantos
+                            colores como el valor del argumento "profundidad". Dependiendo del valor booleano de "pasoPar" se moverá según el primera o segunda dirección del argumento ángulo. [&hellip;]</p>
+                        <img src="../img/tutorial12.png">
+                        <p>mover puntero mueve el puntero dependiendo de la dirección escrita, de momento solo desarrollamos atrás y abajo. [&hellip;]</p>
+                    </article>
+                </li>
+                <li class="one_third">
+                    <article>
+                        <img src="../img/tutorial13.png">
+                        <p>la linea "color = planoTridimensional.getCasilla(...)" ocupa las posiciones del puntero para recoger un color de una casilla del plano3D la linea sumaIntensidadColoresDeLasCasillas ... va extrallendo y acumulando la densidad de
+                            los colores para que en conjunto no pasen el valor 1.[&hellip;]</p>
+                    </article>
+                </li>
+            </ul>
+        </main>
+    </div>
 
+    <div class="wrapper row3">
+        <main class="hoc container clear">
+            <h3 align="center">Finalmente</h3>
+            <ul class="nospace group services">
+                <li class="one_third first">
+                    <article>
+                        <a data-fancybox="gallery" href="../img/tutorial14.png"><img src="../img/tutorial14.png"></a>
+                        <p>Se invierte el orden de los colores y se retorna de sondeoDiagonal a visor…[&hellip;]</p>
+                    </article>
+                </li>
+                <li class="one_third">
+                    <article>
+                        <a data-fancybox="gallery" href="../img/tutorial15.png"><img src="../img/tutorial15.png"></a>
+                        <p>[&hellip;]se returna del visor al Tablero.draw() [&hellip;]</p>
+                    </article>
+                </li>
+                <li class="one_third">
+                    <article>
+                        <h3>... volvemos a draw(), pasamos lo peor, espero puedas volver a dormir</h3>
+                        <a data-fancybox="gallery" href="../img/tutorial16.png"><img src="../img/tutorial16.png"></a>
+                        <p>Luego de nuestra travesía tolkiana a través de esas funciones lovecraftianas llegamos a que nuestra variable fichasSondeadas contiene un array de colores rgba luego se mezclaran los colores de fichasSondeadas creando un cuadrado
+                            con las dimensiones del canvas dividido a lo ancho por la cantidad de columnas del tablero y a lo largo por la cantidad de filas y posicionado según esas mismas dimensiones pero multiplicadas por la cantidad de filas y columnas
+                            que se asumen van arriba y a la izquierda que la de el cubo a pintar [&hellip;]
+                        </p>
+                    </article>
+                </li>
+            </ul>
+        </main>
+    </div>
 
     </div>
+    <script src="../js/jquery.backtotop.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.mobilemenu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js%22%3E"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js%22%3E"></script>
 </body>
 <footer>
     <div class="contenedor">
-        <p class="copy">Vector &copy; 2020</p>
+        <p class="copy">Vector &copy; 2020</p><br>
         <div class="sociales">
             <a class="fontawesome-facebook-sign" href="#"></a>
+        </div>
+        <div class="sociales">
             <a class="fontawesome-twitter" href="#"></a>
+        </div>
+        <div class="sociales">
             <a class="fontawesome-camera-retro" href="#"></a>
+        </div>
+        <div class="sociales">
             <a class="fontawesome-google-plus-sign" href="#"></a>
         </div>
+
     </div>
 </footer>
+
 </html>
-        

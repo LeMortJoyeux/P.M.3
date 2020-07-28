@@ -204,6 +204,10 @@
      background-color: #aa3242;
      color: #fff;
  }
+ 
+ #tutorial {
+     margin-right: 50px;
+ }
  /*media queries / responsive*/
  
  @media(max-width: 768px) {
